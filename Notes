@@ -1,0 +1,31 @@
+ng new mono-repo --create-application="false"
+
+npm install webpack webpack-cli  --save-dev
+
+ng g application [apllication name] --routing --style=scss
+
+NgRx ====>
+
+ng add @ngrx/schematics@latest
+
+(ng generate @ngrx:schematics:store store_name)
+
+ng config cli.defaultCollection @ngrx/schematics
+
+npm install @ngrx/store --save (or use --force)
+
+npm install @ngrx/effects --save (or use --force)
+
+npm install @ngrx/entity --save (or use --force)
+
+npm install @ngrx/store-devtools --save (or use --force)
+
+ng generate store store_name --root --module app.module.ts ==> (--root is for to specify the this
+   store is going accessible only to the specified module which we mentioned using  --module flag we need to give
+   name of the module)
+
+
+=================================================================================================================
+
+Action in NgRx => Action Name, Data(optional)
+  eg: '[User] addUser ' , {user}
